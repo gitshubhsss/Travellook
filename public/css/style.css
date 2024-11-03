@@ -1,0 +1,181 @@
+/* homepage */
+* {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+.card-link {
+    text-decoration: none;
+    color: #222222 !important;
+}
+
+.card {
+    border: none;
+}
+
+.card-img-top {
+    height: 40vh;
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 0;
+}
+
+
+
+/* navbar */
+.navbar-brand {
+    font-family: "Pacifico", cursive !important;
+    color: #fe424d !important;
+    font-size: 2rem;
+}
+
+.navbar {
+    background-color: white;
+
+}
+
+.navbar-nav a {
+    color: #222222 !important;
+    font-weight: 600;
+}
+
+/* footer */
+.f-info {
+    height: 7rem;
+    background-color: #ebebeb;
+    text-align: center !important;
+}
+
+.f-info-links a {
+    text-decoration: none !important;
+    color: #222222 !important;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline !important;
+}
+
+.f-info-socials i {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.f-info-socials,
+.f-info-links,
+.f-info-brand {
+    width: 100% Im !important;
+}
+
+/* //error handeler */
+
+.container-error {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.heading-err h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* //Reviews */
+
+.fa-star {
+    font-size: 0.8rem;
+}
+
+.review-time {
+    font-size: 0.7rem;
+}
+
+.del-review {
+    font-size: 1.2rem !important;
+    color: red;
+}
+
+/* //flash messages */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter {
+    text-align: center;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.filter:hover {
+    opacity: 1;
+}
+
+.filter .fa-solid {
+    color: black;
+}
+
+.filter .fa-brands {
+    color: black;
+}
+
+.filter p {
+    font-size: 0.8rem;
+}
+
+.tax-info {
+    display: none;
+}
+
+.tax-toggle {
+
+    /* padding: 1rem; */
+    /* width: 30%; */
+    height: 2.5rem;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    margin-left: 30%;
+    margin-top: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .tax-toggle {
+        margin-left: 15%;
+        /* Reduced margin */
+    }
+}
+
+/* Media query for small tablets and large phones */
+@media (max-width: 576px) {
+    .tax-toggle {
+        margin-left: 10%;
+        /* Further reduced margin */
+    }
+}
+
+/* Media query for small phones */
+@media (max-width: 400px) {
+    .tax-toggle {
+        margin-left: 5%;
+        /* Minimal margin for smaller devices */
+    }
+}

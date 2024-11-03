@@ -1,0 +1,90 @@
+<% layout('/layout/boilerplate') -%>
+
+    <body>
+        <div class="row mb-3 mt-3">
+            <div class="col-md-6 offset-md-3 col">
+                <h3>Create new listings</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-7 offset-md-3 col">
+                <form action="/listings" method="post" class="needs-validation" enctype="multipart/form-data"
+                    novalidate>
+                    <div class="mb-3">
+                        <label for="title">title</label>
+                        <input type="text" name="listing[title]" id="" placeholder="Enter the title"
+                            class="form-control" required>
+                        <div class="invalid-feedback">
+                            Please Enter title.
+                        </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="description">description</label>
+                        <input type="text" name="listing[description]" id="" placeholder="Enter the description"
+                            class="form-control" required>
+                        <div class="invalid-feedback">
+                            Please Enter the description.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="cars" class="form-label">Select your category</label>
+                        <select name="listing[category]" id="category" class="form-select">
+                            <option value="rooms">Rooms</option>
+                            <option value="iconiccities">Iconic Cities</option>
+                            <option value="historicalhomes">Historical Homes</option>
+                            <option value="mountains">Mountains</option>
+                            <option value="catles">Catles</option>
+                            <option value="pools">Pools</option>
+                            <option value="camping">Camping</option>
+                            <option value="farm">Farm</option>
+                        </select>
+                    </div>
+                    
+
+
+                    <div class="mb-3">
+                        <label for="image">Upload Image</label>
+                        <input type="file" name="listing[image]" id="" placeholder="Enter the url" class="form-control"
+                            required>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="price">price :</label>
+                        <input type="text" name="listing[price]" id="" placeholder="1200  " class="form-control"
+                            required>
+                        <div class="invalid-feedback">
+                            Please Enter the price
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="location">location</label>
+                        <input type="text" name="listing[location]" id="" placeholder=" Enter location"
+                            class="form-control" required>
+                        <div class="invalid-feedback">
+                            Please Enter the location.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="country">country</label>
+                        <input type="text" name="listing[country]" id="" placeholder="Enter the coutry"
+                            class="form-control" required>
+                        <div class="invalid-feedback">
+                            Please Enter the country.
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center justify-content-md-start">
+                        <button class="btn btn-success">Add listing</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>

@@ -1,0 +1,38 @@
+<% layout('/layout/boilerplate') -%>
+
+    <body>
+        <%- include('../includes/subnav') %>
+        <% if (listings.length>= 1) { %>
+            <div class="row row-cols-sm-2 row-cols-lg-3 mt-3">
+                <% for (const listing of listings) { %>
+                    <a href="/listings/<%= listing._id %>" class="card-link">
+                        <div class="card col mt-4">
+                            <img src="<%= listing.image.url %>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <b>
+                                        <%= listing.title %>
+                                    </b>
+                                    <br>
+                                    <%= listing.price %> &#x20B9 /night
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <% } %>
+            </div>
+            <% } else { %>
+                <div class="d-flex justify-content-center align-items-center mt-5">
+                    <div class="card text-center" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="fas fa-exclamation-circle"></i> No Listings Found</h5>
+                            <p class="card-text">It looks like there are currently no listings available. Please check
+                                back later!</p>
+                
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+
+
+    </body>
